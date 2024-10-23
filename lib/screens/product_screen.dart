@@ -33,13 +33,9 @@ class ProductScreen extends StatelessWidget {
                 SizedBox(
                   height: 450,
                   width: MediaQuery.of(context).size.width,
-                  child: FanCarouselImageSlider.sliderType1(
-                    sliderHeight: 430,
-                    autoPlay: true,
-                    imagesLink: images,
-                    isAssets: true,
-                  ),
+                  child: Image.asset("images/image1.jpg")
                 ),
+                SizedBox(height: 10,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -68,7 +64,7 @@ class ProductScreen extends StatelessWidget {
                       ],
                     ),
                     Text(
-                      "\Rp.250.000",
+                      "\Rp.50.000",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25,

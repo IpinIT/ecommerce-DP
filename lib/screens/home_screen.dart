@@ -8,8 +8,8 @@ class Item {
 
   Item({required this.name, required this.price, required this.imagePath});
 }
+
 class HomeScreen extends StatelessWidget {
-  
   List tabs = ["All", "Category", "Top", "Recommended"];
 
   List imageList = [
@@ -27,10 +27,10 @@ class HomeScreen extends StatelessWidget {
   ];
 
   List prices = [
-    "\$80000",
-    "\$120000",
-    "\$180000",
-    "\$250000",
+    "\Rp.50.000",
+    "\Rp.100.000",
+    "\Rp.150.000",
+    "\Rp.200.000",
   ];
 
   List reviews = [
@@ -178,10 +178,10 @@ class HomeScreen extends StatelessWidget {
                                   InkWell(
                                     onTap: () {
                                       Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ProductScreen()));
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  ProductScreen()));
                                     },
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
@@ -232,7 +232,7 @@ class HomeScreen extends StatelessWidget {
                                   SizedBox(
                                     width: 120,
                                     child: Text(
-                                      "agagaj kanfknafa knafanfkn anfkanfkan anfanfka aknfkan afafaafasf afafa afaedsfsgsgsd sgfsdsdgs",
+                                      "This is the best items that we have.",
                                       maxLines: 4,
                                       overflow: TextOverflow.ellipsis,
                                     ),
@@ -252,14 +252,6 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       SizedBox(
                                         width: 10,
-                                      ),
-                                      Text(
-                                        prices[index],
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold,
-                                          color: Color(0xFF6C63FF),
-                                        ),
                                       ),
                                     ],
                                   ),

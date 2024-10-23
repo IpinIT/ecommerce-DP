@@ -1,3 +1,4 @@
+import 'package:ecommerce_uts/screens/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -66,11 +67,11 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) => HomeScreen(),
-                  //     ));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginScreen(),
+                      ));
                 },
                 child: Text(
                   "Reset Password",

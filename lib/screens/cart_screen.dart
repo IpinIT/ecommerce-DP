@@ -1,3 +1,4 @@
+import 'package:ecommerce_uts/screens/payment_method_screen.dart';
 import 'package:ecommerce_uts/widgets/container_button_modal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,10 +19,10 @@ class CartScreen extends StatelessWidget {
   ];
 
   List prices = [
-    "\$80000",
-    "\$120000",
-    "\$180000",
-    "\$250000",
+    "\Rp.50.000",
+    "\Rp.100.000",
+    "\Rp.150.000",
+    "\Rp.200.000",
   ];
 
   @override
@@ -46,7 +47,7 @@ class CartScreen extends StatelessWidget {
                   shrinkWrap: true,
                   scrollDirection: Axis.vertical,
                   physics: NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) { 
+                  itemBuilder: (context, index) {
                     return Container(
                       margin: EdgeInsets.symmetric(vertical: 10),
                       child: Row(
@@ -167,7 +168,7 @@ class CartScreen extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "\$3000000",
+                    "\Rp.500.000",
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w900,
@@ -180,7 +181,13 @@ class CartScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PaymentMethodScreen(),
+                      ));
+                },
                 child: ContainerButtonModel(
                     containerWidth: MediaQuery.of(context).size.width,
                     bgColor: Color(0xFF6C63FF),
